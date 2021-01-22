@@ -257,7 +257,9 @@ body {
     width: 56vh;
     display: -ms-grid;
     display: grid;
-    margin: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     -ms-grid-column: 1;
     grid-column: 1;
     -ms-grid-columns: 1fr;
@@ -273,14 +275,12 @@ body {
   }
   #container .searchBar #search {
     font-size: 23px;
-    width: 70%;
     height: 6vh;
     width: 75%;
     display: inline;
   }
   #container .searchBar #btn {
-    width: 22%;
-    height: 8vh;
+    height: 7vh;
     width: 20%;
   }
   #container .movieTitle {
