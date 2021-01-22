@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+
+    <style>
+        body{
+            background-color: grey;
+        }
+
+        #image{
+            
+            height:50px;
+        }
+    </style>
+    <body>
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+
+            <input id="search" type="text" placeholder="szukaj" onfocus="this.value=''">
+            <button id="btn">Szukaj</button>
+
+            <div id="demo"></div>
+            <div id="image"></div>
+
+
+        
+        <script async>
+
+           const btn = document.getElementById("btn");
+
+           
+
+           btn.addEventListener('click', ()=>{
+
+            document.getElementById("image").innerHTML ="";
+               
+
+            const search = document.getElementById("search").value;
+
+            const url =   'http://www.omdbapi.com/?apikey=7bd5b2c8&t=';
+
+          //   const url = 'http://api.tvmaze.com/search/shows?q=';
+
+
+             const result  = url + search;
+             fetch(result)
+
+             .then((res)=>{
+                 return res.json();
+             })
+             .then((data)=>{
+                document.getElementById("demo").innerHTML = data.Title;
+                 console.log(data)
+                 console.log(data.Actors)
+                 console.log(data.Poster)
+                 let poster = data.Poster
+
+                 imageCreate = () =>{
+                     const elem = document.createElement("img")
+                     document.getElementById("image").appendChild(elem);
+                     elem.src = poster;
+                 }
+                 imageCreate();
+
+                
+
+             })
+           })
+
+           
+
+            
+
+
+    
+           
+            
+
+          
+
+
+
+
+
+ 
+
+
+
+
+        
+
+
+
+
+
+
+
+
+
+        </script>
+    </body>
+</html>

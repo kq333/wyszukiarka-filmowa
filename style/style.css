@@ -1,0 +1,336 @@
+body {
+  background-color: rgba(7, 6, 6, 0.8);
+  font-family: 'Lato', sans-serif;
+  Box-sizing: border-box;
+  margin: 0;
+}
+
+#container {
+  width: 1000px;
+  height: auto;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto;
+      grid-template-columns: auto;
+      grid-template-areas: "searchBar" "movieTitle";
+}
+
+#container .searchBar {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: searchBar;
+  margin: auto;
+  margin-top: 100px;
+  width: 100%;
+}
+
+#container .searchBar #search {
+  width: 91%;
+  height: 30px;
+  border-radius: 6px;
+  border: 3px solid rgba(84, 172, 223, 0.6);
+  background-color: rgba(207, 202, 202, 0.932);
+}
+
+#container .searchBar .btn {
+  border: rgba(65, 76, 104, 0.795);
+  color: red;
+}
+
+#container .searchBar .btn2 {
+  color: black;
+  border: rgba(65, 76, 104, 0.795);
+}
+
+#container .searchBar #btn {
+  width: 70px;
+  height: 38px;
+  cursor: pointer;
+  background-color: rgba(65, 76, 104, 0.795);
+  border-radius: 5px;
+  border: rgba(65, 76, 104, 0.795);
+}
+
+#container .searchBar #btn::before {
+  font: normal normal normal 14px/1 FontAwesome;
+  content: '\f002';
+  display: block;
+}
+
+#container .searchBar #btn:hover {
+  opacity: 0.7;
+}
+
+#container .movieTitle {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: movieTitle;
+  margin: auto;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-size: 60px;
+  letter-spacing: 6px;
+  text-transform: uppercase;
+  color: rgba(107, 105, 105, 0.747);
+}
+
+#container .mainContent {
+  width: auto;
+  margin: auto;
+  display: -ms-grid;
+  display: grid;
+  gap: 20px;
+  -ms-grid-columns: 30% 65%;
+      grid-template-columns: 30% 65%;
+      grid-template-areas: "leftSide rightSide";
+}
+
+#container .mainContent .leftSide {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  grid-area: leftSide;
+}
+
+#container .mainContent .leftSide .poster {
+  width: auto;
+}
+
+#container .mainContent .leftSide .poster img {
+  width: 100%;
+  height: 50%;
+}
+
+#container .mainContent .rightSide {
+  -ms-grid-row: 1;
+  -ms-grid-column: 2;
+  grid-area: rightSide;
+  margin: auto;
+}
+
+#container .mainContent .rightSide .director {
+  height: auto;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+#container .mainContent .rightSide .director .NameD {
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(143, 140, 140, 0.329);
+}
+
+#container .mainContent .rightSide .director .DirectorName {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: rgba(143, 136, 136, 0.726);
+}
+
+#container .mainContent .rightSide .Actors {
+  height: auto;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+#container .mainContent .rightSide .Actors .NameA {
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(143, 140, 140, 0.329);
+}
+
+#container .mainContent .rightSide .Actors .ActorsName {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: rgba(143, 136, 136, 0.726);
+}
+
+#container .mainContent .rightSide .Country {
+  height: auto;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+#container .mainContent .rightSide .Country .NameC {
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(143, 140, 140, 0.329);
+}
+
+#container .mainContent .rightSide .Country .CountryName {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: rgba(143, 136, 136, 0.726);
+}
+
+#container .mainContent .rightSide .Year {
+  height: auto;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+#container .mainContent .rightSide .Year .NameY {
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(143, 140, 140, 0.329);
+}
+
+#container .mainContent .rightSide .Year .YearName {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: rgba(143, 136, 136, 0.726);
+}
+
+#container .mainContent .rightSide .Genre {
+  height: auto;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+#container .mainContent .rightSide .Genre .NameG {
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(143, 140, 140, 0.329);
+}
+
+#container .mainContent .rightSide .Genre .GenreName {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: rgba(143, 136, 136, 0.726);
+}
+
+#container .mainContent .rightSide .Plot {
+  height: auto;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+#container .mainContent .rightSide .Plot .NameP {
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(143, 140, 140, 0.329);
+}
+
+#container .mainContent .rightSide .Plot .PlotName {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: rgba(143, 136, 136, 0.726);
+}
+
+#container .mainContent .rightSide .Rating {
+  height: auto;
+  width: auto;
+  margin-bottom: 10px;
+}
+
+#container .mainContent .rightSide .Rating .NameR {
+  text-transform: uppercase;
+  font-size: medium;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: rgba(143, 140, 140, 0.329);
+}
+
+#container .mainContent .rightSide .Rating .RatingName {
+  text-transform: uppercase;
+  font-size: 20px;
+  color: rgba(143, 136, 136, 0.726);
+}
+
+@media only screen and (max-width: 500px) {
+  body {
+    display: table-cell;
+    vertical-align: middle;
+  }
+  #container {
+    width: 56vh;
+    display: -ms-grid;
+    display: grid;
+    margin: center;
+    -ms-grid-column: 1;
+    grid-column: 1;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "searchBar" "movieTitle" "mainContent"  "leftSide" "rightSide";
+  }
+  #container .searchBar {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: searchBar;
+    width: 100%;
+    margin: 0;
+  }
+  #container .searchBar #search {
+    font-size: 23px;
+    width: 70%;
+    height: 6vh;
+    width: 75%;
+    display: inline;
+  }
+  #container .searchBar #btn {
+    width: 22%;
+    height: 8vh;
+    width: 20%;
+  }
+  #container .movieTitle {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: movieTitle;
+    font-size: large;
+    margin-top: 40px;
+    height: 20px;
+    color: rgba(231, 179, 81, 0.856);
+  }
+  #container .mainContent {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr;
+        grid-template-columns: 1fr;
+        grid-template-areas: "leftSide" "rightSide";
+  }
+  #container .mainContent .leftSide {
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: leftSide;
+    width: 100%;
+  }
+  #container .mainContent .rightSide {
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    grid-area: rightSide;
+    width: 100%;
+  }
+  #container .mainContent .rightSide .director .NameD {
+    font-size: small;
+  }
+  #container .mainContent .rightSide .Actors .NameA {
+    font-size: small;
+  }
+  #container .mainContent .rightSide .Country .NameC {
+    font-size: small;
+  }
+  #container .mainContent .rightSide .Year .NameY {
+    font-size: small;
+  }
+  #container .mainContent .rightSide .Genre .NameG {
+    font-size: small;
+  }
+  #container .mainContent .rightSide .Plot .NameP {
+    font-size: small;
+  }
+  #container .mainContent .rightSide .Rating .NameR {
+    font-size: small;
+  }
+}
+/*# sourceMappingURL=style.css.map */

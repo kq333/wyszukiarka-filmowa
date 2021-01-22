@@ -1,0 +1,57 @@
+body{
+    background-color: grey;
+}
+
+#container{ 
+    width:1000px;
+    height: auto;
+    margin:auto;
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-areas:"searchBar"
+                        "movieTitle"
+                        
+                        ;
+
+
+
+
+
+.searchBar{
+    grid-area:searchBar;
+    margin:auto;
+    margin-top:100px;
+
+    #search{
+        width: 500px;
+        height: 30px;
+        border-radius: 6px;
+    }
+
+    #btn{
+        width: 70px;
+        height: 36px;
+    }
+
+
+}
+
+.movieTitle{
+    grid-area: movieTitle;
+    margin:auto;
+    margin-top:50px;
+    font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}

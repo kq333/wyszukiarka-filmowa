@@ -1,0 +1,40 @@
+body{
+    background-color: grey;
+}
+
+#container{ 
+    width:1000px;
+    height: auto;
+    margin:auto;
+    display:grid;
+    grid-template-columns: auto;
+    grid-template-areas:"searchBar" ;
+
+
+
+
+
+.searchBar{
+    grid-area:searchBar;
+    margin:auto;
+    margin-top:100px;
+
+    #search{
+        width: 200px;;
+    }
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+}
